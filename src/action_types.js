@@ -1,0 +1,7 @@
+const types = {
+  UPTIME_REQUEST: 'UPTIME_REQUEST',
+  UPTIME_SUCCESS: 'UPTIME_SUCCESS',
+  UPTIME_FAIL: 'UPTIME_FAIL',
+};
+
+export default types;
