@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class Sidebar extends React.PureComponent {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +22,9 @@ class Sidebar extends React.PureComponent {
 
   render() {
     return (
-      <div style={{ width: '150px', textAlign: 'center'}} >
+      <div style={{ width: '150px', textAlign: 'center' }}>
         <p> {this.state.mins}:{this.state.secs < 10 ? `0${this.state.secs}` : this.state.secs}</p>
+        <p>{this.props.title}</p>
         <ul>
           <li>
             <Link to={'/'}>Home</Link>
@@ -38,6 +38,6 @@ class Sidebar extends React.PureComponent {
   }
 }
 
-const selector = () => ({});
+const selector = state => ({ title: state.config.title });
 
 export default connect(selector, {})(Sidebar);

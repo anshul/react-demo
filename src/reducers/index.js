@@ -1,3 +1,7 @@
 import config from './config';
+import settings from './settings';
 
-export default { config };
+export default {
+  config,
+  settings,
+};
