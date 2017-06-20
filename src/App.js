@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Container from './Container';
 import HomePage from './pages/HomePage';
+import Sidebar from './partials/Sidebar';
 
 import store from './store';
 
@@ -11,6 +12,7 @@ const App = () =>
   <Provider store={store}>
     <Router>
       <Container>
+        <Sidebar />
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route component={() => <h1>Not found</h1>} />
